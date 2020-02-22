@@ -1,0 +1,7 @@
+
+#set($data=$json.read('src/site/markdown/data.json'))
+|Item|Description|
+|----|-----------|
+#foreach ($item in $data.keys()) 
+|$item|$data.get($item)|
+#end
